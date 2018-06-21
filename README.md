@@ -2,6 +2,7 @@
 
 
 Форма добавления новой промоакции
+https://mmolchanova.github.io/Test_ArtofAd/
 
 -------
 
