@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Тестовое задание</title>
+        <link rel="stylesheet" href="./lib/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./lib/css/bootstrap-datetimepicker.min.css" />
+        <link rel="stylesheet" href="./src/styles/index.css" />
+    </head>
+    <body>        
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <ul class="nav nav-tabs">
+                        <li class="active" id="mainTab"><a data-toggle="tab" href="#panel1">Основное</a></li>
+                        <li class="hidden" id="couponTab"><a data-toggle="tab" href="#panel2">Бонусные купоны</a></li>  
+                    </ul> 
+                    <div class="tab-content">
+                        <div id="panel1" class="tab-pane fade in active">
+                            <form id="mainForm" class="form-horizontal form-horizontal--margin">
+                                <div class="row">
+                                    <div class="form-group">
+                                        <label for="inputName" class="col-sm-6 control-label">Название</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" name="inputName" id="inputName" placeholder="Название">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="startDate" class="col-sm-6 control-label">Дата начала</label>
+                                        <div class="col-sm-6">
+                                            <div class="input-group" id="datetimepicker1">
+                                                <input type="text" class="input-date form-control" name="startDate" id="startDate">
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="finishDate" class="col-sm-6 control-label">Дата окончания</label>
+                                        <div class="col-sm-6">
+                                            <div class="input-group" id="datetimepicker2">
+                                                <input type="text" class="input-date form-control" id="finishDate" name="finishDate">
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="finishCheckInDate" class="col-sm-6 control-label">Дата окончания регистрации участников</label>
+                                        <div class="col-sm-6">
+                                            <div class="input-group" id="datetimepicker3">
+                                                <input type="text" class="input-date form-control" id="finishCheckInDate" name="finishCheckInDate">
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="selectPromo" class="col-sm-6 control-label">Тип промоакции</label>
+                                        <div class="col-sm-6">
+                                            <select class="form-control" id="selectPromo">
+                                                <option value="none"></option>
+                                                <option value="coupon">Бонусные купоны</option>
+                                                <option value="campaign">Рекламная акция</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group hidden" id="descriptionBlock">
+                                        <label class="col-sm-6 control-label" for="description">Описание</label>
+                                        <div class="col-sm-6">
+                                            <textarea class="form-control form-textarea" name="description" id="description" rows="5"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <input id="btnMainForm" type="button" class="btn btn-success" value="Валидировать">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="panel2" class="tab-pane fade">
+                            <form id="couponForm" class="form-horizontal form-horizontal--margin">
+                                <div class="row">
+                                    <div class="form-group">
+                                        <label for="inputPrice" class="col-sm-6 control-label">Стоимость одного купона</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" name="inputPrice" id="inputPrice" value="100">
+                                        </div>
+                                    </div>                                
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label" for="settings">Расширенные настройки</label>
+                                        <div class="checkbox col-sm-6">                                 
+                                            <input type="checkbox" class="checkbox-elem" id="settings">
+                                        </div> 
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label" for="checkIn">Регистрация участников</label>
+                                        <div class="checkbox col-sm-6">
+                                            <input type="checkbox" class="checkbox-elem" id="checkIn">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label" for="complition">Досрочное завершение акции</label>
+                                        <div class="checkbox col-sm-6">
+                                            <input type="checkbox" class="checkbox-elem" id="complition">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="selectMulti" class="col-sm-6 control-label">Право на досрочное завершение</label>
+                                        <div class="col-sm-6">
+                                            <select multiple class="form-control" id="selectMulti">
+                                                <option value="cashier" selected>Кассир</option>
+                                                <option value="manager">Менеджер</option>
+                                                <option value="putin" selected>Путин</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">                   
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <input id="btnCouponForm" type="button" class="btn btn-success" value="Валидировать">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./lib/js/jquery-3.2.1.min.js"></script>
+        <script src="./lib/js/moment-with-locales.min.js"></script>
+        <script src="./lib/js/bootstrap.min.js"></script>
+        <script src="./lib/js/bootstrap-datetimepicker.min.js"></script>
+        <script src="./lib/js/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="./src/js/index.js"></script>
+    </body>
+</html>

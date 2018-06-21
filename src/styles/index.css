@@ -1,0 +1,21 @@
+.btn {
+    display: block;
+    width: 180px;
+    margin: 0 auto;
+}
+
+.form-horizontal--margin {
+    margin-top: 20px;
+}
+
+.form-textarea {
+    resize: none;
+}
+
+input[type=checkbox].checkbox-elem {
+    margin-left: 0; 
+}
+
+.error {
+    color: red;
+}
